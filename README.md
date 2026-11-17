@@ -1,16 +1,39 @@
-# React + Vite
+# TP React 2 : Gestion de catalogue de livres
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Petite application React (Vite) pour gérer le catalogue d'une bibliothèque universitaire.
 
-Currently, two official plugins are available:
+Cours : React JS - Mme Aicha DIAGNE
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Ce que fait l'application
 
-## React Compiler
+- Affiche une liste de livres avec leur titre, leur auteur et leur statut (Disponible / Emprunté)
+- Le titre principal indique le nombre de livres disponibles
+- Le bouton "Emprunter" / "Rendre" change le statut du livre
+- Un formulaire permet d'ajouter un nouveau livre
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Ce que j'ai utilisé
 
-## Expanding the Oxlint configuration
+- Composant `BookCard` avec des props (titre, auteur, estDisponible, onClickEmprunt)
+- Affichage conditionnel (statut et texte du bouton)
+- `.map()` avec `key` pour afficher la liste
+- Hook `useState` (liste des livres + champs du formulaire)
+- Formulaire avec champs contrôlés et `onSubmit`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Structure
+
+```
+src/
+├── components/
+│   └── BookCard.jsx
+├── App.jsx
+└── main.jsx
+```
+
+## Lancer le projet
+
+```bash
+npm install
+npm run dev
+```
+
+Puis ouvrir le lien affiché dans le terminal (souvent http://localhost:5173).
